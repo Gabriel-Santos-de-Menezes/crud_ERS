@@ -1,0 +1,49 @@
+
+/* Página de login */
+
+.pagina_login{
+    color: #fff;
+    background-color: #111118;
+}
+.card-login{
+    background-color:#FFA500;
+}
+
+
+/* Fim login page*/
+
+/*Menu horizontal*/
+
+.border_nav_vertical{
+    border: solid 1px black;
+    padding:  12px;
+}
+/*Fim menu Horizontal*/
+
+/*Inicio página home*/
+.nav_esquerda{
+    max-width: 150px;
+}
+.vertical-nav {
+    min-width: 200px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+  .page-content {
+    width: calc(100%);
+    margin-left: 200px;
+    transition: all 0.4s;
+  }
+
+/*Página de Cadastrar Usuários*/
+.form-horizontal{
+    max-width: 800px;
+    margin-left: 200px;
+}
+
