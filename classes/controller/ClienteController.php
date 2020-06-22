@@ -23,12 +23,12 @@ if($_POST){
             if ($resultado){
                 echo '<script> '
                         . 'alert("Inserido com sucesso");'
-                        . 'window.location.href = "/template_sistema/CadastrarUsuario.php"'
+                        . 'window.location.href = "/template_sistema/CadastrarCliente.php"'
                     . '</script>';
             } else {
                 echo '<script> '
                         . 'alert("Erro ao inserir!");'
-                        . 'window.location.href = "/template_sistema/CadastrarUsuario.php"'
+                        . 'window.location.href = "/template_sistema/CadastrarCliente.php"'
                     . '</script>';
             }
             

@@ -3,7 +3,7 @@
 class Fornecedor{
     private $cnpj;
     private $nome;
-    private $endereco;
+    private $email;
     private $telefone;
     private $tp_material_fornecido;
 
@@ -12,7 +12,7 @@ class Fornecedor{
     }
 
     public function __set($atributo, $value){
-        $this->atributo = $atributo;
+        $this->$atributo = $value;
     }
 }
 

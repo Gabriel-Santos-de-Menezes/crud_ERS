@@ -42,13 +42,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="CadastrarFornecedores" class="nav-link text-dark font-italic bg-light">
+        <a href="CadastrarFornecedores.php" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
           Cadastro de Fornecedores
         </a>
       </li>
       <li class="nav-item">
-        <a href="CadastrarPedidos" class="nav-link text-dark font-italic bg-light">
+        <a href="CadastrarPedidos.php" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
           Cadastro de Pedidos
         </a>
