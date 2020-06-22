@@ -4,7 +4,7 @@
   <?php include("menu.php"); ?>
   <div class="container">
 
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="classes/controller/ClienteController.php" method="post">
       <fieldset>
         <div class="panel panel-primary">
           <div class="panel-heading">Cadastro de Cliente</div>
@@ -39,56 +39,35 @@
                 <input id="cpf" name="cpf" placeholder="Apénas números" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
               </div>
 
-
-              <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
-              <div class="col-md-4">
-                <label required="" class="radio-inline" for="radios-0">
-                  <input name="sexo" id="sexo" value="feminino" type="radio" required>
-                  Feminino
-                </label>
-                <label class="radio-inline" for="radios-1">
-                  <input name="sexo" id="sexo" value="masculino" type="radio">
-                  Masculino
-                </label>
-              </div>
             </div>
 
 
             <div class="form-group">
 
 
-              <label class="col-md-2 control-label" for="Nome">Nascimento<h11>*</h11></label>
+              <label class="col-md-2 control-label" for="dtNasc">Nascimento<h11>*</h11></label>
               <div class="col-md-2">
-                <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                <input id="dtnasc" name="data_nascimento" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
               </div>
 
 
 
               <!-- Prepended text-->
               <div class="form-group">
-                <label class="col-md-1 control-label" for="prependedtext">Telefone</label>
+                <label class="col-md-1 control-label" for="telefone">Telefone</label>
                 <div class="col-md-3">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
+                    <input id="prependedtext" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
                   </div>
                 </div>
               </div>
 
-              <!-- Prepended text-->
-              <div class="form-group">
-                <label class="col-md-2 control-label" for="email">Email <h11>*</h11></label>
-                <div class="col-md-5">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input id="email" name="email" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                  </div>
-                </div>
-              </div>
+              
 
+            <!-- 
 
-
-              <!-- Prepended text-->
+               Prepended text
               <div class="form-group">
                 <label class="col-md-2 control-label" for="prependedtext">Endereço</label>
                 <div class="col-md-4">
@@ -136,12 +115,14 @@
 
               </div>
 
+
               <div class="form-group">
                 <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
                 <div class="col-md-2">
                   <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
                 </div>
               </div>
+             -->
 
               <div class="form-group">
                 <label class="col-md-2 control-label" for="email">Email <h11>*</h11></label>
@@ -151,18 +132,7 @@
                     <input id="email" name="email" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                   </div>
                 </div>
-                <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
-                <div class="col-md-4">
-                  <label required="" class="radio-inline" for="radios-0">
-                    <input name="sexo" id="sexo" value="feminino" type="radio" required>
-                    Feminino
-                  </label>
-                  <label class="radio-inline" for="radios-1">
-                    <input name="sexo" id="sexo" value="masculino" type="radio">
-                    Masculino
-                  </label>
-                </div>
-              </div>
+                
 
 
             </div>

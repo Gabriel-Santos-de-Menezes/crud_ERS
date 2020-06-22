@@ -1,13 +1,12 @@
 <?php
 
-class Usuario{
+class Cliente{
     private $nome;
     private $rg;
     private $cpf;
-    private $status;
-    private $login;
+    private $telefone;
+    private $data_nascimento;
     private $email;
-    private $senha;
 
     public function __get($atributo){
         return $this->$atributo;

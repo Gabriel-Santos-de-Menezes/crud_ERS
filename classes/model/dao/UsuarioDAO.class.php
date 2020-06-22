@@ -4,7 +4,7 @@ class UsuarioDAO{
     private $query;
 
     public function inserir($objUsuario){
-        $this->query = "insert into usuario (nome,cpf,rg,email, login, status ,senha) values(:nome,:cpf,:rg, :email, :login, :status :senha, )";
+        $this->query = "insert into usuario (nome,cpf,rg,email, login, status ,senha) values(:nome,:cpf, :rg, :email, :login, :status, :senha)";
         try{
             $conexao = new Conexao();
             $usuario = $conexao->getCon()->prepare($this->query);

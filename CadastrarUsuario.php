@@ -7,7 +7,7 @@
     <form class="form-horizontal" method="Post" action="classes/controller/UsuarioController.php">
       <fieldset>
         <div class="panel panel-primary">
-          <div class="panel-heading">Cadastro de Cliente</div>
+          <div class="panel-heading">Cadastro de Usuários</div>
 
           <div class="panel-body">
             <div class="form-group">

@@ -1,27 +1,25 @@
 <?php
 include '../config/Conexao.class.php';
-include '../model/dao/UsuarioDAO.class.php';
-include '../model/domain/Usuario.class.php';
+include '../model/dao/ClienteDAO.class.php';
+include '../model/domain/Cliente.class.php';
 
 if($_POST){
 
     if(isset($_POST['Cadastrar'])){
 
-        $usuario = new Usuario();
-        $usuarioDAO = new UsuarioDAO();
+        $cliente = new Cliente();
+        $clienteDAO = new ClienteDAO();
 
-        $usuario->__set('nome', $_POST['nome']);
-        $usuario->__set('cpf', $_POST['cpf']);
-        $usuario->__set('rg', $_POST['rg']);
-        $usuario->__set('email', $_POST['email']);
-        $usuario->__set('login', $_POST['login']);
-        $usuario->__set('senha', $_POST['senha']);
-        $usuario->__set('status', $_POST['status']);
+        $cliente->__set('nome', $_POST['nome']);
+        $cliente->__set('cpf', $_POST['cpf']);
+        $cliente->__set('rg', $_POST['rg']);
+        $cliente->__set('telefone', $_POST['telefone']);
+        $cliente->__set('data_nascimento', $_POST['data_nascimento']);
 
-        $resultado = $usuarioDAO->inserir($usuario);
+        $resultado = $clienteDAO->inserir($cliente);
         echo $resultado;
-        print_r($usuario);
-        echo $usuario->__get('nome');
+        print_r($cliente);
+        
             if ($resultado){
                 echo '<script> '
                         . 'alert("Inserido com sucesso");'
@@ -33,6 +31,7 @@ if($_POST){
                         . 'window.location.href = "/template_sistema/CadastrarUsuario.php"'
                     . '</script>';
             }
+            
     }
     
     
