@@ -59,7 +59,7 @@
 
     <ul class="nav flex-column bg-white mb-0 collapse show" id="gerenciar">
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
+        <a href="GerenciarPedidos.php" class="nav-link text-dark font-italic">
           <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
           Gerenciar Pedidos
         </a>
@@ -71,9 +71,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
+        <a href="gerenciarFornecedor.php" class="nav-link text-dark font-italic">
           <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-          Pie charts
+          Gerenciar Fornecedores
         </a>
       </li>
       <li class="nav-item">

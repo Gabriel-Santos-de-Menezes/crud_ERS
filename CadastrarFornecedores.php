@@ -28,9 +28,9 @@
             </div>
 
             <div class="form-group">
-              <label class="col-md-2 control-label" for="cnpj">CNPJ<h11>*</h11></label>
-              <div class="col-md-2">
-                <input id="cnpj" name="cnpj" placeholder="Apénas números" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+              <label class="col-md-3 control-label" for="cnpj">CNPJ<h11>*</h11></label>
+              <div class="col-md-3">
+                <input id="cnpj" name="cnpj" placeholder="Apénas números" class="form-control input-md" required="" type="text" maxlength="14" onkeydown="javascript: fMasc( this, mCNPJ );" onBlur="showhide()">
               </div>
 
             </div>
@@ -42,7 +42,7 @@
               <div class="col-md-3">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                  <input id="prependedtext" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" OnKeyPress="formatar('## #####-####', this)">
+                  <input id="prependedtext" name="telefone" class="form-control" placeholder="XX XXXXX-XXXX" type="text" maxlength="14" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$" onkeydown="javascript: fMasc( this, mTel );">
                 </div>
               </div>
             </div>

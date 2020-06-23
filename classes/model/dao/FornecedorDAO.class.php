@@ -20,6 +20,17 @@ class FornecedorDAO{
         }
     }
 
+    public function consultar(){
+        $this->query = "Select * from fornecedor";
+        try{
+            $conexao = new Conexao();
+            $p = $conexao->getCon();
+            return $p->query($this->query);
+        } catch (Exception $e){
+            return "Erro ao consultar! ".$e->getMessage();
+        }
+    }
+
 }
 
 ?>
