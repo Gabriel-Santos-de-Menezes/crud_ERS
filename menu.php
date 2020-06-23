@@ -65,9 +65,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
+        <a href="clientes.php" class="nav-link text-dark font-italic">
           <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-          Bar charts
+          Gerenciar Clientes
         </a>
       </li>
       <li class="nav-item">

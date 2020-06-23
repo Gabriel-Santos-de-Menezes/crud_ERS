@@ -19,7 +19,7 @@ if($_POST){
         $resultado = $fornecedorDAO->cadastrar($fornecedor);
         echo $resultado;
         print_r($fornecedor);
-        /*
+        
             if ($resultado){
                 echo '<script> '
                         . 'alert("Inserido com sucesso");'
@@ -30,7 +30,7 @@ if($_POST){
                         . 'alert("Erro ao inserir!");'
                         . 'window.location.href = "/template_sistema/CadastrarFornecedores.php"'
                     . '</script>';
-            }*/
+            }
             
     }
     
