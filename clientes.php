@@ -66,7 +66,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-content">
+                            <div class="modal-body">
                                 <form class="form-horizontal" action="classes/controller/ClienteController.php?codigo=<?= $linha['codigo'] ?>" method="post">
                                     <fieldset>
                                         <div class="panel panel-primary">
@@ -166,7 +166,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-content">
+                            <div class="modal-body">
                                 <form class="form-horizontal" action="classes/controller/ClienteController.php" method="post">
                                     <fieldset>
                                         <div class="panel panel-primary">

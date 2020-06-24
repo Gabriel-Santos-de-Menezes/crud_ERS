@@ -13,6 +13,7 @@
           <th scope="col">Nome</th>
           <th scope="col">Quantidade</th>
           <th scope="col">Valor</th>
+          <th scope="col">Valor Total</th>
           <th scope="col">Ações</th>
         </tr>
       </thead>
@@ -30,6 +31,7 @@
             <td><?= $linha['nome'] ?></td>
             <td><?= $linha['quantidade'] ?></td>
             <td><?= $linha['valor'] ?></td>
+            <td><?= $linha['valor_total'] ?></td>
             <td>
               <a href="edit_produto.php?id=<?= $linha['codigo'] ?>" data-toggle="modal" data-target=".bd-example-modal-lg" class="text-warning">Alterar </a>|
               <a href="delete_produto.php?id=<?= $linha['codigo'] ?>" data-toggle="modal" data-target="#excluir" class="text-danger">Excluir</a>|
@@ -68,7 +70,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-content">
+                <div class="modal-body">
                   <form class="form-horizontal" action="classes/controller/ProdutoController.php?codigo=<?= $linha['codigo'] ?>" method="post">
                     <fieldset>
                       <div class="panel panel-primary">
@@ -145,7 +147,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-content">
+                <div class="modal-body">
                   <form class="form-horizontal" action="classes/controller/ClienteController.php" method="post">
                     <fieldset>
                       <div class="panel panel-primary">

@@ -4,7 +4,7 @@ class ProdutoDAO{
     private $query;
 
     public function cadastrar($objProduto){
-        $this->query = "insert into produto (nome, quantidade, valor, fornecedor_produto, data_entrada) values( :nome, :quantidade, :valor, :fornecedor_produto, CURRENT_TIMESTAMP)";
+        $this->query = "insert into produto (nome, quantidade, valor, fornecedor_produto, data_entrada, valor_total) values( :nome, :quantidade, :valor, :fornecedor_produto, CURRENT_TIMESTAMP, :quantidade * :valor)";
         try{
             $conexao = new Conexao();
             $produto = $conexao->getCon()->prepare($this->query);
@@ -20,7 +20,7 @@ class ProdutoDAO{
     }
 
     public function alterar($objProduto){
-        $this->query = "UPDATE produto set nome = :nome, quantidade = :quantidade, valor= :valor, fornecedor_produto = :fornecedor_produto WHERE codigo = :codigo ";
+        $this->query = "UPDATE produto set nome = :nome, quantidade = :quantidade, valor= :valor, fornecedor_produto = :fornecedor_produto, valor_total = :quantidade * :valor WHERE codigo = :codigo ";
         try{
             $conexao = new Conexao();
             $produto = $conexao->getCon()->prepare($this->query);
