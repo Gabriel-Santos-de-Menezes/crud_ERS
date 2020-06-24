@@ -4,7 +4,7 @@ class ProdutoDAO{
     private $query;
 
     public function cadastrar($objProduto){
-        $this->query = "insert into produto ( nome, quantidade, valor, fornecedor_produto) values( :nome, :quantidade, :valor, :fornecedor_produto)";
+        $this->query = "insert into produto (nome, quantidade, valor, fornecedor_produto, data_entrada) values( :nome, :quantidade, :valor, :fornecedor_produto, CURRENT_TIMESTAMP)";
         try{
             $conexao = new Conexao();
             $produto = $conexao->getCon()->prepare($this->query);
@@ -20,16 +20,16 @@ class ProdutoDAO{
     }
 
     public function alterar($objProduto){
-        $this->query = "UPDATE produto set cnpj = :cnpj, nome = :nome, telefone = :telefone, email= :email, tp_material_fornecido = :tp_material_fornecido WHERE cnpj = :cnpj ";
+        $this->query = "UPDATE produto set nome = :nome, quantidade = :quantidade, valor= :valor, fornecedor_produto = :fornecedor_produto WHERE codigo = :codigo ";
         try{
             $conexao = new Conexao();
-            $fornecedor = $conexao->getCon()->prepare($this->query);
-            $fornecedor->bindValue('cnpj', $objProduto->__get('cnpj'));
-            $fornecedor->bindValue('nome', $objProduto->__get('nome'));
-            $fornecedor->bindValue('telefone', $objProduto->__get('telefone'));
-            $fornecedor->bindValue('email', $objProduto->__get('email'));
-            $fornecedor->bindValue('tp_material_fornecido', $objProduto->__get('tp_material_fornecido'));
-            return $fornecedor->execute();
+            $produto = $conexao->getCon()->prepare($this->query);
+            $produto->bindValue('codigo', $objProduto->__get('codigo'));
+            $produto->bindValue('nome', $objProduto->__get('nome'));
+            $produto->bindValue('quantidade', $objProduto->__get('quantidade'));
+            $produto->bindValue('valor', $objProduto->__get('valor'));
+            $produto->bindValue('fornecedor_produto', $objProduto->__get('fornecedor_produto'));
+            return $produto->execute();
 
         }catch(Exception $e){
             return "Erro ao cadastrar!". $e->getMessage();
@@ -40,21 +40,21 @@ class ProdutoDAO{
         $this->query = "Select * from produto";
         try{
             $conexao = new Conexao();
-            $p = $conexao->getCon();
-            return $p->query($this->query);
+            $produto = $conexao->getCon();
+            return $produto->query($this->query);
         } catch (Exception $e){
             return "Erro ao consultar! ".$e->getMessage();
         }
     }
 
     public function excluir($objFornecedor){
-        $this->query = "delete from fornecedor where cnpj = :cnpj";
+        $this->query = "delete from produto where codigo = :codigo";
         try{
             $conexao = new Conexao();
-            $fornecedor = $conexao->getCon()->prepare($this->query);
+            $produto = $conexao->getCon()->prepare($this->query);
 
-            $fornecedor->bindValue(":cnpj", $objFornecedor->__get('cnpj'));
-            return $fornecedor->execute();
+            $produto->bindValue(":codigo", $objFornecedor->__get('codigo'));
+            return $produto->execute();
 
         } catch(Exception $e){
             return "Erro ao excluir! ".$e->getMessage();
