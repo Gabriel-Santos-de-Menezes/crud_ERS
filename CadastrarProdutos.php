@@ -1,24 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php include("head.php"); ?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Sistema em PHP</title>
-  </head>
-  <body>
-    <?php include("menu.php"); ?>
+<body>
+  <?php include("menu.php"); ?>
     <div class="container">
 
       
-      <form class="form-horizontal">
+      <form class="form-horizontal" action="classes/controller/ProdutoController.php" method="post">
       <fieldset>
       <div class="panel panel-primary">
-          <div class="panel-heading">Cadastro de Cliente</div>
+          <div class="panel-heading">Cadastro de Produto</div>
           
           <div class="panel-body">
       <div class="form-group">
@@ -38,38 +28,33 @@
       
 
       <div class="form-group">
-        <label class="col-md-2 control-label" for="rg">Marca <h11>*</h11></label>  
+        <label class="col-md-2 control-label" for="quantidade">quantidade <h11>*</h11></label>  
         <div class="col-md-3">
-        <input id="marca" name="marca"  class="form-control input-md" required="" type="text">
+        <input id="quantidade" name="quantidade"  class="form-control input-md" required="" type="number">
       </div>
         
-        <label class="col-md-1 control-label" for="cpf">Modelo<h11>*</h11></label>  
+        <label class="col-md-1 control-label" for="cpf">Valor<h11>*</h11></label>  
         <div class="col-md-3">
-        <input id="modelo" name="modelo"  class="form-control input-md" required="" type="text" >
+        <input id="valor" name="valor"  class="form-control input-md" required="" type="number" >
       </div>
   
       </div>
       
   
       <div class="form-group">
-        <label class="col-md-2 control-label" for="rg">Quantidade <h11>*</h11></label>  
+        <label class="col-md-2 control-label" for="fornecedor_produto">Fornecedor:  <h11>*</h11></label>  
         <div class="col-md-3">
-        <input id="quantidade" name="quantidade"  class="form-control input-md" required="" type="text" maxlength="11" >
+        <input id="fornecedor_produto" name="fornecedor_produto"  class="form-control input-md" required="" type="text" maxlength="11" >
       </div>
 
-      <div class="form-group">
-        <label class="col-md-1 control-label" for="senha">Valor <h11>*</h11></label>
-        <div class="col-md-3">
-          <input id="valor" name="valor" type="number" class="form-control" required="" type="text" >
-        </div>
-      </div>
+      
 
       </div>
       
       <div class="form-group">
-        <label class="col-md-2 control-label" for="Cadastrar"></label>
+        <label class="col-md-2 control-label" for="cadastrar"></label>
         <div class="col-md-8">
-          <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+          <button id="Cadastrar" name="cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
           <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
         </div>
       </div>
@@ -82,7 +67,6 @@
       </form>
     </div>
     
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <!------ Include the above in your HEAD tag ---------->

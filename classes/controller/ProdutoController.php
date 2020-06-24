@@ -1,25 +1,26 @@
 <?php
 include '../config/Conexao.class.php';
-include '../model/dao/FornecedorDAO.class.php';
-include '../model/domain/Fornecedor.class.php';
+include '../model/dao/ProdutoDAO.class.php';
+include '../model/domain/Produto.class.php';
 
 if($_POST || $_GET){
 
-    if(isset($_POST['Cadastrar'])){
+    if(isset($_POST['cadastrar'])){
 
-        $fornecedor = new Fornecedor();
-        $fornecedorDAO = new FornecedorDAO();
+        $produto = new Produto();
+        $produtoDAO = new ProdutoDAO();
 
-        $fornecedor->__set('nome', $_POST['nome']);
-        $fornecedor->__set('cnpj', $_POST['cnpj']);
-        $fornecedor->__set('email', $_POST['email']);
-        $fornecedor->__set('telefone', $_POST['telefone']);
-        $fornecedor->__set('tp_material_fornecido', $_POST['materialFonrcecido']);
-
-        $resultado = $fornecedorDAO->cadastrar($fornecedor);
-        echo $resultado;
-        print_r($fornecedor);
+        $produto->__set(':nome', $_POST['nome']);
+        $produto->__set(':quantidade', $_POST['quantidade']);
         
+        $produto->__set(':valor', $_POST['valor']);
+        $produto->__set(':fornecedor_produto', $_POST['fornecedor_produto']);
+
+        $resultado = $produtoDAO->cadastrar($produto);
+        echo $resultado;
+        print_r($produto);
+        
+        /*
             if ($resultado){
                 echo '<script> '
                         . 'alert("Inserido com sucesso");'
@@ -31,6 +32,7 @@ if($_POST || $_GET){
                         . 'window.location.href = "/template_sistema/gerenciarFornecedor.php"'
                     . '</script>';
             }
+            */
             
     }
 

@@ -1,12 +1,10 @@
 <?php
 
-class Cliente{
-    private $codigo;
+class Produto{
     private $nome;
     private $quantidade;
-    private $data_entrada;
-    private $data_saida;
     private $valor;
+    private $codigo;
     private $fornecedor_produto;
 
     public function __get($atributo){
@@ -16,8 +14,6 @@ class Cliente{
     public function __set($atributo, $value){
         $this->$atributo = $value;
     }
-
-
 }
 
 ?>

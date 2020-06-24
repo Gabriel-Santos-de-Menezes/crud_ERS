@@ -5,7 +5,7 @@
     <div class="container page-content">
         <h1>Fornecedores</h1>
 
-        <a href="CadastrarFornecedor.php">Novo Fornecedor</a>
+        <a href="CadastrarFornecedores.php">Novo Fornecedor</a>
         <table class="table" id="tabela">
             <thead>
                 <tr>
@@ -48,7 +48,7 @@
                                 </div>
 
                                 <div class="modal-footer">
-                                    <a class="btn btn-success" href="classes/controller/ClienteController.php?acao=btnExcluirCliente&codigo=<?= $linha['codigo'] ?>" name="btnExcluirCliente">Sim</a>
+                                    <a class="btn btn-success" href="classes/controller/FornecedorController.php?acao=btnExcluirFornecedor&cnpj=<?= $linha['cnpj'] ?>" name="btnExcluirFornecedor">Sim</a>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
                                 </div>
                             </div>
@@ -61,13 +61,13 @@
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-header bg-warning">
-                                <h5 class="modal-title" id="exampleModalLabel">Alterar dados do cliente <?= $linha['nome'] ?> ?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Alterar dados do fornecedor <?= $linha['nome'] ?> ?</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-content">
-                                <form class="form-horizontal" action="classes/controller/FornecedorController.php" method="post">
+                                <form class="form-horizontal" action="classes/controller/FornecedorController.php?cnpj=<?= $linha['cnpj'] ?>" method="post">
                                     <fieldset>
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">Cadastro de Fornecedor</div>
@@ -163,8 +163,8 @@
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label" for="Cadastrar"></label>
                                                     <div class="col-md-8">
-                                                        <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
-                                                        <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+                                                        <button id="Cadastrar" name="alterar" class="btn btn-success" type="Submit">Cadastrar</button>
+                                                        <button id="Cancelar" name="cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
                                                     </div>
                                                 </div>
 
@@ -184,7 +184,7 @@
                     <div class="modal fade bd-example-modal-lg" id="consultarCliente" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-header bg-primary">
-                                <h5 class="modal-title" id="exampleModalLabel">Alterar dados do cliente <?= $linha['nome'] ?> ?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Alterar dados do fornecedor <?= $linha['nome'] ?> ?</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -256,7 +256,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label" for="Cadastrar"></label>
+                                                    <label class="col-md-2 control-label" for="Cancelar"></label>
                                                     <div class="col-md-8">
                                                         <button id="Cancelar" data-dismiss="modal" name="Cancelar" class="btn btn-danger" type="Reset">Fechar</button>
                                                     </div>

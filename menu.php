@@ -1,4 +1,4 @@
-<nav class="navbar menu navbar-expand-md  navbar-dark bg-primary page-content">
+<nav class="navbar menu navbar-expand-md  navbar-dark bg-dark page-content">
   <a class="navbar-brand" href="#">Sistema</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -53,6 +53,12 @@
           Cadastro de Pedidos
         </a>
       </li>
+      <li class="nav-item">
+        <a href="CadastrarProdutos.php" class="nav-link text-dark font-italic bg-light">
+          <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+          Cadastro de Produtos
+        </a>
+      </li>
     </ul>
 
     <p class=" border_nav_vertical text-gray font-weight-bold text-uppercase  small  mb-0 " data-toggle="collapse" data-target="#gerenciar">Gerenciamento</p>
@@ -77,9 +83,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
+        <a href="produtos.php" class="nav-link text-dark font-italic">
           <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-          Line charts
+          Gerenciar Produtos
         </a>
       </li>
     </ul>
