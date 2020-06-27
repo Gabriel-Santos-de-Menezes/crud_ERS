@@ -48,6 +48,17 @@ class FornecedorDAO{
         }
     }
 
+    public function consultarCnpj($cnpj){
+        $this->query = "Select nome from fornecedor where cnpj =".$cnpj;
+        try{
+            $conexao = new Conexao();
+            $fornecedor = $conexao->getCon();
+            return $fornecedor->query($this->query);
+        } catch (Exception $e){
+            return "Erro ao consultar! ".$e->getMessage();
+        }
+    }
+
     public function excluir($objFornecedor){
         $this->query = "delete from fornecedor where cnpj = :cnpj";
         try{

@@ -11,6 +11,7 @@
 
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <Script src="js/main.js"></Script>
+  <Script src="js/ajax.js"></Script>
   
 
   <!-- Bootstrap CSS -->

@@ -12,6 +12,11 @@
 
 /* Fim login page*/
 
+
+/*Menu*/
+.menu{
+    margin-left: 200px;
+}
 /*Menu horizontal*/
 
 .border_nav_vertical{
@@ -36,7 +41,7 @@
   }
   
   .page-content {
-    width: calc(100%);
+    width: 100%;
     margin-left: 200px;
     transition: all 0.4s;
   }
